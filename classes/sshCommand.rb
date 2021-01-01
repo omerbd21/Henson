@@ -18,4 +18,7 @@ class SshCommand
   def result
     @result
   end
+  def command(command)
+    @command = command
+  end
 end

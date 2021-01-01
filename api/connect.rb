@@ -2,7 +2,7 @@ require_relative '../classes/sshCommand'
 post '/connect' do
   push = JSON.parse(request.body.read)
   ip = push["ip"]
-  command = push["command"]
+  command = "puppetserver ca list --all | awk '{ print $1 '}"
   runCommand = SshCommand.new(command, ip)
   result = runCommand.run
   if result.is_a?(Net::SSH::ConnectionTimeout.class)
