@@ -14,4 +14,4 @@ e.g. ssh puppetserver should work)
 This is part of a bigger project, which is why it is currently only an API without a UI.  
 Later on, it will be integrated with multipule APIs to create a web application.
 
-<div style="text-align:center">**Omer Ben David, January 2021**</div>
+**Omer Ben David, January 2021**
