@@ -8,7 +8,7 @@ class Node
   def add_to_cluster
     # The hostname of the puppet server must be puppetserver
     run_command = SshCommand.new("yum install -y puppet-agent", @hostname).run
-    run_command.command("echo \"export PATH=/opt/puppetlabs/bin/;$PATH\"  >> /etc/profile").run
+    run_command.command("echo \"export PATH=/opt/puppetlabs/bin/:$PATH\"  >> /etc/profile").run
     run_command.command("puppet config set server puppetserver --section main").run
     run_command.command("puppet agent -t").run
     SshCommand.new("puppetserver ca sign --all", "puppetserver").run
