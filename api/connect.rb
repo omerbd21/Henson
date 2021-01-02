@@ -1,5 +1,5 @@
 require_relative '../classes/sshCommand'
-post '/connect' do
+get '/get_nodes' do
   push = JSON.parse(request.body.read)
   ip = push["ip"]
   command = "puppetserver ca list --all | awk '{ print $1 '}"
