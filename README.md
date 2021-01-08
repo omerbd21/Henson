@@ -12,6 +12,6 @@ e.g. ssh puppetserver should work)
 3. All of your nodes & master must be available for passwordless SSH
 ## Notes
 This is part of a bigger project, which is why it is currently only an API without a UI.  
-Later on, it will be integrated with multipule APIs to create a web application.
+Later on, it will be integrated with multiple APIs to create a web application.
 
 **Omer Ben David, January 2021**
